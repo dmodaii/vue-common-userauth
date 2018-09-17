@@ -1,0 +1,15 @@
+{
+  "name": "@jyb/vue-common-userauth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.jtjr.com/zhiming/vue-common-userauth.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
