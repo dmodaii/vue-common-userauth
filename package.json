@@ -1,15 +1,24 @@
 {
   "name": "@jyb/vue-common-userauth",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel index.js --presets babel-preset-es2015 --out-dir ./build",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "http://git.jtjr.com/zhiming/vue-common-userauth.git"
   },
+  "files": [
+    "build"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
 }

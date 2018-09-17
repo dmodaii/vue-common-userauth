@@ -1,4 +1,4 @@
-
+# 前端
 - 路由配置
 ```javascript
     path: '/collectmanage',
@@ -35,4 +35,24 @@ router.beforeEach((to, from, next) => {
     });
   }
 });
+```
+
+- 页面按钮
+```html
+
+  <span v-if="props.row.reduction_state == 0 && hasAuth('collectreducelist', 'audit')" class="color-primary operateButton" @click="auditDialogShow(props.row, 0)">{{props.row.loan_number}}</span>
+```
+
+# node
+
+```javascript
+  // 设置权限  home.js
+    this.ctx.session.passportUserAuth = userAuth.code == 0 && userAuth.data || {};
+ 
+   // route
+   const  {nodeHasAuth} = require('@jyb/vue-common-userauth/index.js');
+  // 权限验证(中间件)
+  app.router.post(routerPrefix + '/reduce/audit', nodeHasAuth('collectreducelist', 'audit'), controller[version].afterLoan.reduce.audit);
+
+
 ```
