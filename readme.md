@@ -1,4 +1,20 @@
 # 前端
+- 全局方法
+```javascript
+import {hasAuth} from '@jyb/vue-common-userauth';
+
+function install (Vue, options) {
+    Vue.prototype.hasAuth = function (module, action){
+        const userAuthAll = window.userAuth || {};
+        return hasAuth(module, action, userAuthAll)
+    };
+};
+
+export default {
+    install
+}
+```
+
 - 路由配置
 ```javascript
     path: '/collectmanage',

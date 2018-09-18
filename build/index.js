@@ -26,7 +26,7 @@ function hasAuth(module, action, userAuthAll) {
     return false;
   }
   if (action) {
-    return userModule.actionsList.indexOf(action.toLocaleLowerCase()) !== -1;
+    return userModule.actionsList.indexOf(action) !== -1;
   }
 
   return true;

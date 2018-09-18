@@ -1,6 +1,6 @@
 {
   "name": "@jyb/vue-common-userauth",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "build/index.js",
   "scripts": {
@@ -13,7 +13,8 @@
     "url": "http://git.jtjr.com/zhiming/vue-common-userauth.git"
   },
   "files": [
-    "build"
+    "build",
+    "index.js"
   ],
   "author": "",
   "license": "ISC",
